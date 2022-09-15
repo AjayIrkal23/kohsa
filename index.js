@@ -15,7 +15,7 @@ dotenv.config()
 
 mongoose.connect(process.env.Mongourl).then(()=>console.log("Connected to MongoDB")).catch((err)=>console.log(err));
 
-app.listen(process.env.port,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log(`backend server running`);
 }); 
 app.use(cors())
