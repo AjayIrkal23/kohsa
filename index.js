@@ -13,7 +13,7 @@ const morgan = require('morgan');
 app.use(morgan("common"))
 dotenv.config()
 
-mongoose.connect(process.env.Mongourl || 5000).then(()=>console.log("Connected to MongoDB")).catch((err)=>console.log(err));
+mongoose.connect(process.env.Mongourl).then(()=>console.log("Connected to MongoDB")).catch((err)=>console.log(err));
 
 app.listen(process.env.port,()=>{
     console.log(`backend server running`);
